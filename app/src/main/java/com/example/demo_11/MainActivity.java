@@ -27,3 +27,15 @@ public class MainActivity extends AppCompatActivity {
 
         webview.loadUrl("https://www.google.com");
     }
+    public void clicked(View view) {
+        String stringURL = urledittext.getText().toString();
+
+        if (!stringURL.isEmpty()) {
+            if (!stringURL.startsWith("http://") && !stringURL.startsWith("https://")) {
+                stringURL = "https://" + stringURL;
+            }
+            webview.loadUrl(stringURL);
+        }
+    }
+}
+
