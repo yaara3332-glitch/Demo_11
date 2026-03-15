@@ -21,3 +21,9 @@ public class MainActivity extends AppCompatActivity {
         webview = findViewById(R.id.webview);
         urledittext = findViewById(R.id.URL);
 
+        webview.setWebViewClient(new WebViewClient());
+        WebSettings webSettings = webview.getSettings();
+        webSettings.setJavaScriptEnabled(true);
+
+        webview.loadUrl("https://www.google.com");
+    }
